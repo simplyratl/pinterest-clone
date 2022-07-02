@@ -1,0 +1,140 @@
+.profile {
+    display: block;
+    margin-top: 120px !important;
+    padding-bottom: 32px;
+}
+.profile .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile .top .avatar-picture {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profile .top .username {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+.profile .top .email {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+.profile .top .button {
+    font-size: 1.1rem;
+    background-color: red;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+.profile .bottom {
+    margin-top: 38px;
+    overflow: hidden;
+}
+.profile .bottom .top-pictures {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 18px;
+}
+.profile .bottom .top-pictures #created {
+    margin-right: 14px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.profile .bottom .top-pictures #saved {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.profile .bottom .pictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    padding: 0 24px;
+}
+
+.profile .bottom .pictures img {
+    width: 300px;
+    height: 440px;
+    border-radius: 18px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.edit-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.edit-container.open {
+    display: flex;
+}
+.edit-container .edit {
+    position: relative;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 400px;
+    height: 660px;
+}
+.edit-container .edit #remove {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.edit-container .edit h3 {
+    font-size: 1.4rem;
+}
+.edit-container .edit .container {
+    position: relative;
+    margin-top: 40px;
+}
+.edit-container .edit .container label {
+    font-size: 1.2rem;
+    width: 100%;
+}
+.edit-container .edit .container input,
+.edit-container .edit .container textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+}
+.edit-container .edit .container textarea {
+    height: 240px;
+}
+.edit-container .edit .container button {
+    background-color: red;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 8px;
+    color: white;
+    margin-top: 18px;
+    cursor: pointer;
+}
+.edit-container .edit .container #delete-user {
+    background-color: orangered !important;
+}

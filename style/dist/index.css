@@ -1,0 +1,264 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.navbar .navbar-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1% 2%;
+    background-color: white;
+}
+.navbar .navbar-wrapper .logo {
+    width: 40px;
+}
+.navbar .navbar-wrapper input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    padding: 12px 22px;
+    margin: 0 16px;
+    outline: none;
+    border: none;
+    top: 0;
+    left: 0;
+    color: gray;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.navbar .navbar-wrapper input::-moz-placeholder {
+    color: gray;
+}
+.navbar .navbar-wrapper input:-ms-input-placeholder {
+    color: gray;
+}
+.navbar .navbar-wrapper input::placeholder {
+    color: gray;
+}
+.navbar .navbar-wrapper .avatar-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    cursor: pointer;
+}
+.navbar .navbar-wrapper .dropdown {
+    position: absolute;
+    top: 90%;
+    width: 160px;
+    right: 0;
+    background-color: #fff;
+    right: 30px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: none;
+}
+.navbar .navbar-wrapper .dropdown.open {
+    display: block;
+}
+.navbar .navbar-wrapper .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbar .navbar-wrapper .dropdown ul a {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+}
+.navbar .navbar-wrapper .dropdown ul a:hover {
+    background-color: lightgray;
+}
+.navbar .navbar-wrapper .suggestions {
+    position: absolute;
+    background-color: white;
+    width: 84%;
+    top: 65px;
+    padding: 12px;
+    border-radius: 8px;
+    left: 6%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+.navbar .navbar-wrapper .suggestions ul {
+    position: relative;
+    list-style: none;
+}
+.navbar .navbar-wrapper .suggestions ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+.navbar .navbar-wrapper .suggestions ul li:hover {
+    background-color: lightgray;
+}
+.navbar .navbar-wrapper .suggestions ul li img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.navbar .navbar-wrapper .suggestions ul li p {
+    margin-left: 8px;
+    font-size: 1.1rem;
+}
+
+.posts-container {
+    position: relative;
+    top: 100px;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+.posts-container .card {
+    padding: 0;
+    border-radius: 6px;
+    height: 460px;
+    overflow: hidden;
+}
+.posts-container .card:hover img {
+    transform: scale(1.1);
+}
+.posts-container .card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.add-post {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.add-post .add-post-wrapper {
+    position: relative;
+    background-color: #fff;
+    width: 800px;
+    height: 700px;
+    overflow: hidden;
+}
+.add-post .add-post-wrapper .top {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 4px 12px;
+}
+.add-post .add-post-wrapper .top i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.add-post .add-post-wrapper .feed {
+    display: flex;
+    height: 100%;
+}
+.add-post .add-post-wrapper .feed .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.add-post .add-post-wrapper .feed .image img {
+    width: 80%;
+    height: 90%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.add-post .add-post-wrapper .feed .image input {
+    font-size: 0.9rem;
+    margin-left: 8px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.add-post .add-post-wrapper .feed .info {
+    flex: 1;
+    margin-left: 12px;
+}
+.add-post .add-post-wrapper .feed .info .user {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.add-post .add-post-wrapper .feed .info .user .avatar-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.add-post .add-post-wrapper .feed .info .user p {
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+.add-post .add-post-wrapper .feed .info .hashtags {
+    margin-top: 14px;
+    font-size: 1.2rem;
+    width: 97%;
+    padding: 12px 8px;
+    resize: none;
+    border: none;
+    border-radius: 4px;
+    outline: 2px solid gray;
+}
+.add-post .add-post-wrapper .feed .info .hashtags:focus {
+    outline: 2px solid red;
+}
+.add-post .add-post-wrapper .feed .info .description {
+    margin-top: 14px;
+    font-size: 1.2rem;
+    width: 97%;
+    padding: 12px 8px;
+    height: 300px;
+    resize: none;
+    border: none;
+    border-radius: 4px;
+    outline: 2px solid gray;
+}
+.add-post .add-post-wrapper .feed .info .description:focus {
+    outline: 2px solid red;
+}
+.add-post .add-post-wrapper .feed .info input {
+    font-size: 30px;
+    width: 97%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.add-post .add-post-wrapper .feed .info button {
+    margin-top: 30%;
+    outline: none;
+    border: none;
+    background-color: red;
+    width: 97%;
+    color: white;
+    padding: 12px 14px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
