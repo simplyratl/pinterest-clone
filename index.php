@@ -1,9 +1,9 @@
 <?php
 
-require('../conn.php');
+require('./conn.php');
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: /pinterest/pages/login.php");
 }
 
 $id = $_SESSION['id'];
@@ -24,8 +24,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/dist/index.css" />
-    <link rel="stylesheet" href="../style/boilerplate.css" />
+    <link rel="stylesheet" href="./style/dist/index.css" />
+    <link rel="stylesheet" href="./style/boilerplate.css" />
     <script src="https://kit.fontawesome.com/f5f8362cf6.js" crossorigin="anonymous"></script>
     <title>Pinterest</title>
 </head>
@@ -48,8 +48,8 @@ $conn->close();
 
                 <div class="dropdown" id="dropdownUser">
                     <ul>
-                        <a href="./profile.php?id=<?php echo $user['id'] ?>">Profile</a>
-                        <a href="./logout.php">Logout</a>
+                        <a href="./pages/profile.php?id=<?php echo $user['id'] ?>">Profile</a>
+                        <a href="./pages/logout.php">Logout</a>
                     </ul>
                 </div>
             </div>
@@ -100,8 +100,8 @@ $conn->close();
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../script/index.js"></script>
-    <script src="../script/search.js"></script>
+    <script src="./script/index.js"></script>
+    <script src="./script/search.js"></script>
 </body>
 
 </html>

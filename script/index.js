@@ -15,7 +15,7 @@ function openDropDownUser() {
 $("document").ready(() => {
     function show() {
         $.ajax({
-            url: "../post/feed.php",
+            url: "./post/feed.php",
             type: "POST",
             success: (data) => {
                 $("#posts").html(data);
@@ -54,7 +54,7 @@ $("document").ready(() => {
         formData.append("description", description);
 
         $.ajax({
-            url: "../post/add.php",
+            url: "./post/add.php",
             type: "POST",
             processData: false,
             contentType: false,

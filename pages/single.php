@@ -41,7 +41,7 @@ $conn->close();
 <body>
     <div class="navbar">
         <div class="navbar-wrapper">
-            <a href="./index.php">
+            <a href="../index.php">
                 <img src="https://www.drupal.org/files/badgeRGB.png" class="logo" />
             </a>
 

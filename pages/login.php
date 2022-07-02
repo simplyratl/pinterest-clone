@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
         if ($valid) {
             $_SESSION['id'] = $rowUser['id'];
             $conn->close();
-            header('Location: index.php');
+            header('Location: /pinterest/index.php');
         }
     } else {
         $submitError = "User not found.";
